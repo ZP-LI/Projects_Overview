@@ -1,0 +1,8 @@
+indentation. significant of use its with readability code emphasizes philosophy design Its language. programming general-purpose high-level interpreted an is Python
+projects. large-scale and small for code logical clear, write programmers help to aim approach object-oriented its as well as constructs language Its
+programming. functional and object-oriented procedural), (particularly, structured including paradigms, programming multiple supports It garbage-collected. and dynamically-typed is Python
+library. standard comprehensive its to due language included" "batteries a as described often is It
+0.9.0. Python as 1991 in it released first and language, programming ABC the to successor a as 1980s, late the in Python on working began Rossum van Guido
+counting. reference using system collection garbage a and comprehensions list as such features, new introduced and 2000 in released was 2.0 Python
+2020. in 2.7.18 version with discontinued was 2 Python backward-compatible. completely not is that language the of revision major a was and 2008 in released was 3.0 Python
+languages. programming popular most the of one as ranks consistently Python

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pipi/I2ROS_Projects/introtoros_2022_team8_quadruped/devel/.private/stdr_move_base/setup.sh

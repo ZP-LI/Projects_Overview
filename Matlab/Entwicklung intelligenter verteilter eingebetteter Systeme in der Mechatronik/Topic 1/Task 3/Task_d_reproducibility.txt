@@ -1,0 +1,1 @@
+Reproducibility: Yes. The initial marker S1 is accessible from transition t8 or t9

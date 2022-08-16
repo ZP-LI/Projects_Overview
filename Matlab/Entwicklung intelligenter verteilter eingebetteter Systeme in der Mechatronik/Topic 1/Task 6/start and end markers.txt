@@ -1,0 +1,5 @@
+cost vector cost=[0.5 0.8 0.6 0.25 0.25 0.8 0.6 0.5 0.25 0.25]
+start markers m0=[1; 0; 0; 0; 0; 0; 0]
+end markers m'=[0; 0; 0; 1; 0; 0; 0]
+optimal sequence t_opt=[0;0;1;1;0;1;0;0;0;0]
+cost in total: cost.*t_opt=1.65

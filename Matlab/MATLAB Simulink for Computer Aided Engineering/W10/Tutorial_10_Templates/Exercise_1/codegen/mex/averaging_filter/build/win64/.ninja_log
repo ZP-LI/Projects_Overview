@@ -1,0 +1,12 @@
+# ninja log v5
+37	636	6475222119757382	build/win64/averaging_filter_data.obj	4363ad262fe481e7
+69	662	6475222119936905	build/win64/c_mexapi_version.obj	fe33490815b5f7a
+14	679	6475222119986764	build/win64/averaging_filter_terminate.obj	c7f8760688c5abfe
+55	686	6475222120006711	build/win64/_coder_averaging_filter_info.obj	43c1e3de3d6eef2d
+62	693	6475222120026657	build/win64/_coder_averaging_filter_mex.obj	3f131d8208490d54
+49	699	6475222119996736	build/win64/averaging_filter_emxutil.obj	1466b106c3e10ca2
+43	706	6475222120116420	build/win64/_coder_averaging_filter_api.obj	5e77b57ed5cfc609
+30	713	6475222120106445	build/win64/rt_nonfinite.obj	757c544c45604546
+23	719	6475222120076529	build/win64/averaging_filter.obj	5aff08e79aa4c892
+1	724	6475222120066564	build/win64/averaging_filter_initialize.obj	436b03b8e88c1894
+730	1099	6475222124355084	averaging_filter_mex.mexw64	f6bc6ddc622af9e2

@@ -1,0 +1,50 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/taskMetaModel')]
+
+
+[template public generateLibraryText(aLibrary : Library)]
+[comment @main/]
+[file ('test.txt', false, 'UTF-8')]
+
+Author:
+[for (p:Person|Person.allInstances()->select(t|t.oclIsTypeOf(Author)))]
+   Name:[p.Name/]
+   Age:[p.Age/]
+   write books:
+       [for (b:Book|Book.allInstances())]
+            [if b.author->includes(p)] 
+   -[b.Title/] (Category:[if b.oclIsTypeOf(Novel)]Novel[/if][if b.oclIsTypeOf(NonFiction)]NonFiction[/if][if b.oclIsTypeOf(ChildrenBook)]ChildrenBook[/if])
+            [/if]
+       [/for]
+   -----------
+[/for]
+
+Reader:
+[for (p:Person|Person.allInstances()->select(t|t.oclIsTypeOf(Reader)))]
+   Name:[p.Name/]
+   Age:[p.Age/]
+   borrows books:
+   [for (r:Reader|Reader.allInstances()->select(x|x=p))]
+       [for (b:Book|Book.allInstances())]
+             [if r.borrowedbook->includes(b)]
+   -[b.Title/] (Author: [b.author.Name/])
+             [/if]
+       [/for]
+   [/for]
+   -----------
+[/for]
+
+Bookshelf:
+[for (bs:Bookshelf|Bookshelf.allInstances())]
+   Name:[bs.Name/]
+   Category:[bs.BookCategory/]
+   [for (b:Book|Book.allInstances())]
+        [if bs.books->includes(b)]
+   Books:[b.Title/] (isborrowed:[Reader.allInstances().borrowedbook->includes(b)/])
+        [/if]
+   [/for]
+   -----------
+[/for]
+
+[/file]
+[/template]

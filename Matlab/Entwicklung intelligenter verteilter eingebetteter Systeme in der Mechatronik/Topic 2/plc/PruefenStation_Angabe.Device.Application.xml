@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="3.5.15.30" runtimeid="3.5.15.40" libversion="3.5.15.20" compiler="3.5.15.40" lmm="3.5.15.0" profile="CODESYS V3.5 SP15 Patch 4+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <ProjectInfo name="PruefenStation_Angabe" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="GVL">
+        <Node name="arbeitsraum_frei" type="T_BOOL" access="ReadWrite" />
+        <Node name="aufzug_abwaerts" type="T_BOOL" access="ReadWrite" />
+        <Node name="aufzug_aufwaerts" type="T_BOOL" access="ReadWrite" />
+        <Node name="aufzug_oben" type="T_BOOL" access="ReadWrite" />
+        <Node name="aufzug_unten" type="T_BOOL" access="ReadWrite" />
+        <Node name="folgestation_frei" type="T_BOOL" access="ReadWrite" />
+        <Node name="hoehe_ok" type="T_BOOL" access="ReadWrite" />
+        <Node name="luft_an" type="T_BOOL" access="ReadWrite" />
+        <Node name="station_frei" type="T_BOOL" access="ReadWrite" />
+        <Node name="werkstueck_nicht_schwarz" type="T_BOOL" access="ReadWrite" />
+        <Node name="werkstueck_vorhanden" type="T_BOOL" access="ReadWrite" />
+        <Node name="zylinder_ausschieben" type="T_BOOL" access="ReadWrite" />
+        <Node name="zylinder_eingefahren" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

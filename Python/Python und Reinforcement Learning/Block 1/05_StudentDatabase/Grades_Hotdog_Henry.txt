@@ -1,0 +1,5 @@
+Name:		Henry Hotdog
+EMail:		H.Hotdog@tum.de
+Average Grade:	2.9
+
+Henry Hotdog passed the course.

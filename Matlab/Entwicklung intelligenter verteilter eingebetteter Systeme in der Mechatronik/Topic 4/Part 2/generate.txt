@@ -1,0 +1,45 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/plant')]
+
+
+[template public PreConditions(Service_Pre : IService)]
+[comment @main/]
+[file ('PreConditions.txt',false,'UTF-8')]
+[for(IS:IService|IService.allInstances()->select(t|t.oclIsTypeOf(Service)))]
+IF(preID=[IS.id/]) THEN
+        IF([for (s:Service|Service.allInstances())] [if s->includes(IS)] [s.precondition.expression/] [/if] [/for]) THEN
+             preResult:=1;
+        ELSE
+             preResult:=0;
+        END_IF
+END_IF
+[/for]
+[/file]
+[/template]
+
+[template public PostConditions(Service_Post : IService)]
+[comment @main/]
+[file ('PostConditions.txt',false,'UTF-8')]
+[for(IS:IService|IService.allInstances()->select(t|t.oclIsTypeOf(Service)))]
+IF(postID=[IS.id/]) THEN
+        IF([for (s:Service|Service.allInstances())] [if s->includes(IS)] [s.postcondition.expression/] [/if] [/for]) THEN
+             postResult:=1;
+        ELSE
+             postResult:=0;
+        END_IF
+END_IF
+[/for]
+[/file]
+[/template]
+
+[template public Implementations(Service_Impl : IService)]
+[comment @main/]
+[file ('Implementations.txt',false,'UTF-8')]
+[for(IS:IService|IService.allInstances()->select(t|t.oclIsTypeOf(Service)))]
+IF(sID=[IS.id/]) THEN
+      tmax:=[IS.maximumExecutionTime/];
+      [for (s:Service|Service.allInstances())] [if s->includes(IS)] [s.implementation.expression/] [/if] [/for]
+END_IF
+[/for]
+[/file]
+[/template]

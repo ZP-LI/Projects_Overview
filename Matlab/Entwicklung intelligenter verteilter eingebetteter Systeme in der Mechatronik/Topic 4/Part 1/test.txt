@@ -1,0 +1,41 @@
+
+Author:
+   Name:A.A.
+   Age:55
+   write books:
+   -C.B.A. (Category:ChildrenBook)
+   -C.B.B. (Category:ChildrenBook)
+   -----------
+   Name:A.B.
+   Age:77
+   write books:
+   -N.A. (Category:Novel)
+   -N.F.A. (Category:NonFiction)
+   -----------
+
+Reader:
+   Name:R.B.
+   Age:33
+   borrows books:
+   -N.A. (Author: A.B.)
+   -N.F.A. (Author: A.B.)
+   -----------
+   Name:R.A.
+   Age:11
+   borrows books:
+   -C.B.A. (Author: A.A.)
+   -C.B.B. (Author: A.A.)
+   -----------
+
+Bookshelf:
+   Name:L.N.
+   Category:notdefined
+   Books:N.A. (isborrowed:true)
+   Books:N.F.A. (isborrowed:true)
+   -----------
+   Name:L.C.
+   Category:notdefined
+   Books:C.B.A. (isborrowed:true)
+   Books:C.B.B. (isborrowed:true)
+   -----------
+

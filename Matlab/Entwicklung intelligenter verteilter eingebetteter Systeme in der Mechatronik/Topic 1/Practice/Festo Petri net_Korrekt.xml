@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+<net id="Net-One" type="P/T net">
+<token id="Default" enabled="true" red="0" green="0" blue="0"/>
+<place id="air slide_off">
+<graphics>
+<position x="45.0" y="420.0"/>
+</graphics>
+<name>
+<value>air slide_off</value>
+<graphics>
+<offset x="39.0" y="-6.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="air slide on">
+<graphics>
+<position x="120.0" y="480.0"/>
+</graphics>
+<name>
+<value>air slide on</value>
+<graphics>
+<offset x="51.0" y="44.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="elevator_down">
+<graphics>
+<position x="255.0" y="0.0"/>
+</graphics>
+<name>
+<value>elevator_down</value>
+<graphics>
+<offset x="-1.0" y="32.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="elevator_down_withoutLid">
+<graphics>
+<position x="465.0" y="420.0"/>
+</graphics>
+<name>
+<value>elevator_down_withoutLid</value>
+<graphics>
+<offset x="0.0" y="18.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="elevator_up">
+<graphics>
+<position x="255.0" y="285.0"/>
+</graphics>
+<name>
+<value>elevator_up</value>
+<graphics>
+<offset x="52.0" y="-11.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="follow_station_free">
+<graphics>
+<position x="120.0" y="360.0"/>
+</graphics>
+<name>
+<value>follow_station_free</value>
+<graphics>
+<offset x="0.0" y="29.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="follow_station_occupied">
+<graphics>
+<position x="195.0" y="420.0"/>
+</graphics>
+<name>
+<value>follow_station_occupied</value>
+<graphics>
+<offset x="84.0" y="51.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Lid check(!=operation=0)">
+<graphics>
+<position x="390.0" y="330.0"/>
+</graphics>
+<name>
+<value>Lid check(!=operation=0)</value>
+<graphics>
+<offset x="76.0" y="-11.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Lid check(!=operation=1)">
+<graphics>
+<position x="270.0" y="330.0"/>
+</graphics>
+<name>
+<value>Lid check(!=operation=1)</value>
+<graphics>
+<offset x="91.0" y="1.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="time measurement_withLid">
+<graphics>
+<position x="60.0" y="285.0"/>
+</graphics>
+<name>
+<value>time measurement_withLid</value>
+<graphics>
+<offset x="95.0" y="-10.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="time measurement_withoutLid">
+<graphics>
+<position x="675.0" y="390.0"/>
+</graphics>
+<name>
+<value>time measurement_withoutLid</value>
+<graphics>
+<offset x="202.0" y="21.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="workpiece_available">
+<graphics>
+<position x="315.0" y="135.0"/>
+</graphics>
+<name>
+<value>workpiece_available</value>
+<graphics>
+<offset x="136.0" y="5.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="workpiece_free">
+<graphics>
+<position x="315.0" y="30.0"/>
+</graphics>
+<name>
+<value>workpiece_free</value>
+<graphics>
+<offset x="118.0" y="28.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="workpiece_full">
+<graphics>
+<position x="420.0" y="225.0"/>
+</graphics>
+<name>
+<value>workpiece_full</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="workspace_free">
+<graphics>
+<position x="330.0" y="540.0"/>
+</graphics>
+<name>
+<value>workspace_free</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Zylinder_reset_withLid">
+<graphics>
+<position x="60.0" y="180.0"/>
+</graphics>
+<name>
+<value>Zylinder_reset_withLid</value>
+<graphics>
+<offset x="146.0" y="10.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Zylinder_reset_withoutLid">
+<graphics>
+<position x="675.0" y="285.0"/>
+</graphics>
+<name>
+<value>Zylinder_reset_withoutLid</value>
+<graphics>
+<offset x="183.0" y="11.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<transition id="air_on">
+<graphics>
+<position x="120.0" y="420.0"/>
+</graphics>
+<name>
+<value>air_on</value>
+<graphics>
+<offset x="26.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="air off">
+<graphics>
+<position x="45.0" y="480.0"/>
+</graphics>
+<name>
+<value>air off</value>
+<graphics>
+<offset x="31.0" y="50.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>2.0</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="downward_withLid">
+<graphics>
+<position x="60.0" y="135.0"/>
+</graphics>
+<name>
+<value>downward_withLid</value>
+<graphics>
+<offset x="137.0" y="17.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="downward_withoutLid">
+<graphics>
+<position x="465.0" y="360.0"/>
+</graphics>
+<name>
+<value>downward_withoutLid</value>
+<graphics>
+<offset x="66.0" y="33.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="predefine_time_reach_withLid">
+<graphics>
+<position x="60.0" y="225.0"/>
+</graphics>
+<name>
+<value>predefine_time_reach_withLid</value>
+<graphics>
+<offset x="148.0" y="0.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="predifine_time_reach_withoutLid">
+<graphics>
+<position x="675.0" y="330.0"/>
+</graphics>
+<name>
+<value>predifine_time_reach_withoutLid</value>
+<graphics>
+<offset x="212.0" y="18.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Standby">
+<graphics>
+<position x="675.0" y="225.0"/>
+</graphics>
+<name>
+<value>Standby</value>
+<graphics>
+<offset x="85.0" y="17.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="station_free">
+<graphics>
+<position x="315.0" y="90.0"/>
+</graphics>
+<name>
+<value>station_free</value>
+<graphics>
+<offset x="102.0" y="22.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="upward">
+<graphics>
+<position x="315.0" y="180.0"/>
+</graphics>
+<name>
+<value>upward</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>0.5</value>
+</rate>
+<timed>
+<value>true</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Zylinder_expand_highslide">
+<graphics>
+<position x="195.0" y="360.0"/>
+</graphics>
+<name>
+<value>Zylinder_expand_highslide</value>
+<graphics>
+<offset x="153.0" y="37.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="Zylinder_expand_lowslide">
+<graphics>
+<position x="555.0" y="420.0"/>
+</graphics>
+<name>
+<value>Zylinder_expand_lowslide</value>
+<graphics>
+<offset x="93.0" y="36.0"/>
+</graphics>
+</name>
+<orientation>
+<value>90</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<arc id="air_on to air slide on" source="air_on" target="air slide on">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="131" y="436" curvePoint="false"/>
+<arcpath id="001" x="131" y="477" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="air_on to follow_station_free" source="air_on" target="follow_station_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="131" y="426" curvePoint="false"/>
+<arcpath id="001" x="131" y="386" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="air off to air slide_off" source="air off" target="air slide_off">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="57" y="477" curvePoint="false"/>
+<arcpath id="001" x="57" y="446" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="air slide_off to air_on" source="air slide_off" target="air_on">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="71" y="432" curvePoint="false"/>
+<arcpath id="001" x="116" y="432" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="air slide on to air off" source="air slide on" target="air off">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="132" y="507" curvePoint="false"/>
+<arcpath id="001" x="132" y="492" curvePoint="false"/>
+<arcpath id="002" x="61" y="492" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="downward_withLid to elevator_down" source="downward_withLid" target="elevator_down">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="71" y="141" curvePoint="false"/>
+<arcpath id="001" x="73" y="13" curvePoint="false"/>
+<arcpath id="002" x="252" y="12" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="downward_withLid to workspace_free" source="downward_withLid" target="workspace_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="72" y="152" curvePoint="false"/>
+<arcpath id="001" x="333" y="539" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="downward_withoutLid to elevator_down_withoutLid" source="downward_withoutLid" target="elevator_down_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="484" y="377" curvePoint="false"/>
+<arcpath id="001" x="479" y="417" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="downward_withoutLid to workspace_free" source="downward_withoutLid" target="workspace_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="477" y="377" curvePoint="false"/>
+<arcpath id="001" x="351" y="540" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="elevator_down_withoutLid to Zylinder_expand_lowslide" source="elevator_down_withoutLid" target="Zylinder_expand_lowslide">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="491" y="432" curvePoint="false"/>
+<arcpath id="001" x="551" y="432" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="elevator_down to upward" source="elevator_down" target="upward">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="267" y="26" curvePoint="false"/>
+<arcpath id="001" x="268" y="193" curvePoint="false"/>
+<arcpath id="002" x="311" y="192" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="elevator_up to downward_withoutLid" source="elevator_up" target="downward_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="281" y="297" curvePoint="false"/>
+<arcpath id="001" x="478" y="298" curvePoint="false"/>
+<arcpath id="002" x="476" y="366" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="elevator_up to Zylinder_expand_highslide" source="elevator_up" target="Zylinder_expand_highslide">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="252" y="297" curvePoint="false"/>
+<arcpath id="001" x="223" y="298" curvePoint="false"/>
+<arcpath id="002" x="212" y="367" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="follow_station_free to Zylinder_expand_highslide" source="follow_station_free" target="Zylinder_expand_highslide">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="146" y="372" curvePoint="false"/>
+<arcpath id="001" x="191" y="372" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="follow_station_occupied to air_on" source="follow_station_occupied" target="air_on">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="192" y="432" curvePoint="false"/>
+<arcpath id="001" x="146" y="432" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Lid check(!=operation=0) to downward_withoutLid" source="Lid check(!=operation=0)" target="downward_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="408" y="355" curvePoint="false"/>
+<arcpath id="001" x="418" y="373" curvePoint="false"/>
+<arcpath id="002" x="461" y="372" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Lid check(!=operation=1) to Zylinder_expand_highslide" source="Lid check(!=operation=1)" target="Zylinder_expand_highslide">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="275" y="355" curvePoint="false"/>
+<arcpath id="001" x="268" y="373" curvePoint="false"/>
+<arcpath id="002" x="221" y="372" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P12 to T8" source="time measurement_withoutLid" target="predifine_time_reach_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="686" y="387" curvePoint="false"/>
+<arcpath id="001" x="686" y="346" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="P13 to T9" source="Zylinder_reset_withoutLid" target="Standby">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="686" y="282" curvePoint="false"/>
+<arcpath id="001" x="686" y="241" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="predefine_time_reach_withLid to Zylinder_reset_withLid" source="predefine_time_reach_withLid" target="Zylinder_reset_withLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="71" y="231" curvePoint="false"/>
+<arcpath id="001" x="71" y="206" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="station_free to workpiece_available" source="station_free" target="workpiece_available">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="326" y="106" curvePoint="false"/>
+<arcpath id="001" x="326" y="132" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T8 to P13" source="predifine_time_reach_withoutLid" target="Zylinder_reset_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="686" y="336" curvePoint="false"/>
+<arcpath id="001" x="686" y="311" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T9 to elevator_down" source="Standby" target="elevator_down">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="686" y="231" curvePoint="false"/>
+<arcpath id="001" x="688" y="16" curvePoint="false"/>
+<arcpath id="002" x="281" y="12" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="time measurement_withLid to predefine_time_reach_withLid" source="time measurement_withLid" target="predefine_time_reach_withLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="71" y="282" curvePoint="false"/>
+<arcpath id="001" x="71" y="241" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="upward to elevator_up" source="upward" target="elevator_up">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="320" y="196" curvePoint="false"/>
+<arcpath id="001" x="274" y="283" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="upward to workpiece_full" source="upward" target="workpiece_full">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="341" y="192" curvePoint="false"/>
+<arcpath id="001" x="433" y="193" curvePoint="false"/>
+<arcpath id="002" x="432" y="222" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="upward to workspace_free" source="upward" target="workspace_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="327" y="197" curvePoint="false"/>
+<arcpath id="001" x="341" y="537" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workpiece_available to upward" source="workpiece_available" target="upward">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="326" y="161" curvePoint="false"/>
+<arcpath id="001" x="326" y="186" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workpiece_free to station_free" source="workpiece_free" target="station_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="326" y="56" curvePoint="false"/>
+<arcpath id="001" x="326" y="96" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workpiece_full to Zylinder_expand_highslide" source="workpiece_full" target="Zylinder_expand_highslide">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="417" y="237" curvePoint="false"/>
+<arcpath id="001" x="193" y="238" curvePoint="false"/>
+<arcpath id="002" x="205" y="366" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workpiece_full to Zylinder_expand_lowslide" source="workpiece_full" target="Zylinder_expand_lowslide">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="442" y="247" curvePoint="false"/>
+<arcpath id="001" x="433" y="238" curvePoint="false"/>
+<arcpath id="002" x="568" y="238" curvePoint="false"/>
+<arcpath id="003" x="566" y="426" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workspace_free to downward_withLid" source="workspace_free" target="downward_withLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="333" y="539" curvePoint="false"/>
+<arcpath id="001" x="79" y="152" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workspace_free to downward_withoutLid" source="workspace_free" target="downward_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="350" y="539" curvePoint="false"/>
+<arcpath id="001" x="470" y="376" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="workspace_free to upward" source="workspace_free" target="upward">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="341" y="537" curvePoint="false"/>
+<arcpath id="001" x="334" y="197" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zylinder_expand_highslide to follow_station_occupied" source="Zylinder_expand_highslide" target="follow_station_occupied">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="206" y="376" curvePoint="false"/>
+<arcpath id="001" x="206" y="417" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zylinder_expand_highslide to time measurement_withLid" source="Zylinder_expand_highslide" target="time measurement_withLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="191" y="372" curvePoint="false"/>
+<arcpath id="001" x="84" y="304" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zylinder_expand_highslide to workpiece_free" source="Zylinder_expand_highslide" target="workpiece_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="198" y="366" curvePoint="false"/>
+<arcpath id="001" x="163" y="43" curvePoint="false"/>
+<arcpath id="002" x="312" y="42" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zylinder_expand_lowslide to time measurement_withoutLid" source="Zylinder_expand_lowslide" target="time measurement_withoutLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="566" y="436" curvePoint="false"/>
+<arcpath id="001" x="568" y="493" curvePoint="false"/>
+<arcpath id="002" x="688" y="493" curvePoint="false"/>
+<arcpath id="003" x="687" y="416" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zylinder_expand_lowslide to workpiece_free" source="Zylinder_expand_lowslide" target="workpiece_free">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="581" y="432" curvePoint="false"/>
+<arcpath id="001" x="613" y="433" curvePoint="false"/>
+<arcpath id="002" x="613" y="43" curvePoint="false"/>
+<arcpath id="003" x="341" y="42" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zylinder_reset_withLid to downward_withLid" source="Zylinder_reset_withLid" target="downward_withLid">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="69" y="177" curvePoint="false"/>
+<arcpath id="001" x="65" y="151" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+</net>
+</pnml>
