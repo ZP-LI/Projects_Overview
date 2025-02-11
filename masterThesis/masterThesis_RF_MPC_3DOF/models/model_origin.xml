@@ -1,0 +1,171 @@
+<mujoco>
+    <include file="basic_scene.xml" />
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 0 50" dir="0 0 -1"/>
+
+        <body name="world_coordinate" pos="0 0 0">  
+            <geom name="ground" type="plane" size="0 0 0.03" material="matplane" rgba="1 1 1 1"/>
+        </body>
+
+        <body name="main_body" pos="0 0 0.23" euler="0 0 0">
+            <joint name="rail" type="free"/>
+
+            <geom name="box" mass="5.5" type="box" size="0.2025 0.044 0.025" rgba="0.4 0.7 1.0 1"/>
+            <site name="imu" size="0.02" pos="0 0 0"/>
+
+            <body name="FL" pos="0.1505 0.044 0">
+                <joint name="ADACMotor_FL" type="hinge" pos="0 0 0" axis="1 0 0" stiffness="0.2" damping="0.5" armature="0.0065"/>
+                <geom name="ADAC_FL" type="capsule" mass="0.02" size="0.01" fromto="0 0 0 0 0.05 0" rgba="0.0 0.5 0.0 1"/> 
+
+                <body name="UpLegFrame_FL" pos="0 0.05 0" euler="0 -45 0">
+                    <joint name="HipMotor_FL" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                    <geom name="UpLeg_FL" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 -0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                    <body name="DownLegFrame_FL" pos="-0.14 0 0" euler="0 90 0">
+                        <joint name="KneeMotor_FL" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                        <geom name="DownLeg_FL" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                        <body name="FootFrame_FL" pos="0.14 0 0">
+                            <geom name="Foot_FL" type="sphere" mass="0" size="0.02" rgba="1.0 1.0 0.1 1"/>
+                            <site name="Foot_FL_contact" size="0.021"/>
+                        </body>
+                    </body>
+                </body>
+            </body>
+
+            <body name="FR" pos="0.1505 -0.044 0">
+                <joint name="ADACMotor_FR" type="hinge" pos="0 0 0" axis="1 0 0" stiffness="0.2" damping="0.5" armature="0.0065"/>
+                <geom name="ADAC_FR" type="capsule" mass="0.02" size="0.01" fromto="0 0 0 0 -0.05 0" rgba="0.0 0.5 0.0 1"/> 
+
+                <body name="UpLegFrame_FR" pos="0 -0.05 0" euler="0 -45 0">
+                    <joint name="HipMotor_FR" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                    <geom name="UpLeg_FR" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 -0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                    <body name="DownLegFrame_FR" pos="-0.14 0 0" euler="0 90 0">
+                        <joint name="KneeMotor_FR" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                        <geom name="DownLeg_FR" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                        <body name="FootFrame_FR" pos="0.14 0 0">
+                            <geom name="Foot_FR" type="sphere" mass="0" size="0.02" rgba="1.0 1.0 0.1 1"/>
+                            <site name="Foot_FR_contact" size="0.021"/>
+                        </body>
+                    </body>
+                </body>
+            </body>
+
+            <body name="RL" pos="-0.1505 0.044 0">
+                <joint name="ADACMotor_RL" type="hinge" pos="0 0 0" axis="1 0 0" stiffness="0.2" damping="0.5" armature="0.0065"/>
+                <geom name="ADAC_RL" type="capsule" mass="0.02" size="0.01" fromto="0 0 0 0 0.05 0" rgba="0.0 0.5 0.0 1"/> 
+
+                <body name="UpLegFrame_RL" pos="0 0.05 0" euler="0 -45 0">
+                    <joint name="HipMotor_RL" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                    <geom name="UpLeg_RL" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 -0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                    <body name="DownLegFrame_RL" pos="-0.14 0 0" euler="0 90 0">
+                        <joint name="KneeMotor_RL" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                        <geom name="DownLeg_RL" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                        <body name="FootFrame_RL" pos="0.14 0 0">
+                            <geom name="Foot_RL" type="sphere" mass="0" size="0.02" rgba="1.0 1.0 0.1 1"/>
+                            <site name="Foot_RL_contact" size="0.021"/>
+                        </body>
+                    </body>
+                </body>
+            </body>
+
+            <body name="RR" pos="-0.1505 -0.044 0">
+                <joint name="ADACMotor_RR" type="hinge" pos="0 0 0" axis="1 0 0" stiffness="0.2" damping="0.5" armature="0.0065"/>
+                <geom name="ADAC_RR" type="capsule" mass="0.02" size="0.01" fromto="0 0 0 0 -0.05 0" rgba="0.0 0.5 0.0 1"/> 
+
+                <body name="UpLegFrame_RR" pos="0 -0.05 0" euler="0 -45 0">
+                    <joint name="HipMotor_RR" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                    <geom name="UpLeg_RR" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 -0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                    <body name="DownLegFrame_RR" pos="-0.14 0 0" euler="0 90 0">
+                        <joint name="KneeMotor_RR" type="hinge" pos="0 0 0" axis="0 1 0" stiffness="0" damping="0.1" armature="0.0065"/>
+                        <geom name="DownLeg_RR" type="capsule" mass="0.055" size="0.01" fromto="0 0 0 0.14 0 0" rgba="0.0 0.5 0.0 1"/>
+
+                        <body name="FootFrame_RR" pos="0.14 0 0">
+                            <geom name="Foot_RR" type="sphere" mass="0" size="0.02" rgba="1.0 1.0 0.1 1"/>
+                            <site name="Foot_RR_contact" size="0.021"/>
+                        </body>
+                    </body>
+                </body>
+            </body>
+
+        </body>
+    </worldbody>
+
+    <!-- <equality>
+        <connect anchor="0 0 0" body1="world_coordinate" body2="leg2" solimp="1 1 0.001" solref="0.002 1"/> 
+    </equality> -->
+
+    <actuator>
+        <motor name="FL_Hip" joint="ADACMotor_FL" gear="1" ctrllimited="true" ctrlrange="-150 150"/>
+        <motor name="FL_Up" joint="HipMotor_FL" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+        <motor name="FL_Down" joint="KneeMotor_FL" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+
+        <motor name="FR_Hip" joint="ADACMotor_FR" gear="1" ctrllimited="true" ctrlrange="-150 150"/>
+        <motor name="FR_Up" joint="HipMotor_FR" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+        <motor name="FR_Down" joint="KneeMotor_FR" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+
+        <motor name="RL_Hip" joint="ADACMotor_RL" gear="1" ctrllimited="true" ctrlrange="-150 150"/>
+        <motor name="RL_Up" joint="HipMotor_RL" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+        <motor name="RL_Down" joint="KneeMotor_RL" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+
+        <motor name="RR_Hip" joint="ADACMotor_RR" gear="1" ctrllimited="true" ctrlrange="-150 150"/>
+        <motor name="RR_Up" joint="HipMotor_RR" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+        <motor name="RR_Down" joint="KneeMotor_RR" gear="1" ctrllimited="true" ctrlrange="-50 50"/>
+    </actuator>
+
+    <!-- <actuator>
+        <position name="FL_Hip" joint="ADACMotor_FL" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="FL_Up" joint="HipMotor_FL" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="FL_Down" joint="KneeMotor_FL" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+
+        <position name="FR_Hip" joint="ADACMotor_FR" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="FR_Up" joint="HipMotor_FR" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="FR_Down" joint="KneeMotor_FR" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+
+        <position name="RL_Hip" joint="ADACMotor_RL" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="RL_Up" joint="HipMotor_RL" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="RL_Down" joint="KneeMotor_RL" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+
+        <position name="RR_Hip" joint="ADACMotor_RR" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="RR_Up" joint="HipMotor_RR" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+        <position name="RR_Down" joint="KneeMotor_RR" gear="1" ctrllimited="true" ctrlrange="-3.14 3.14" forcelimited="true" forcerange="-50 50" kp="1500"/>
+    </actuator> -->
+
+    <sensor>
+        <gyro name="COM_angVel" site="imu"/>
+        <accelerometer name="COM_linAcc" site="imu"/>
+
+        <actuatorpos name="FL_Hip" actuator="FL_Hip"/>
+        <actuatorpos name="FL_Up" actuator="FL_Up"/>
+        <actuatorpos name="FL_Down" actuator="FL_Down"/>
+
+        <actuatorpos name="FR_Hip" actuator="FR_Hip"/>
+        <actuatorpos name="FR_Up" actuator="FR_Up"/>
+        <actuatorpos name="FR_Down" actuator="FR_Down"/>
+
+        <actuatorpos name="RL_Hip" actuator="RL_Hip"/>
+        <actuatorpos name="RL_Up" actuator="RL_Up"/>
+        <actuatorpos name="RL_Down" actuator="RL_Down"/>
+
+        <actuatorpos name="RR_Hip" actuator="RR_Hip"/>
+        <actuatorpos name="RR_Up" actuator="RR_Up"/>
+        <actuatorpos name="RR_Down" actuator="RR_Down"/>
+
+        <framepos name="COM_linPos" objtype="site" objname="imu"/>
+        <framelinvel name="COM_linVel" objtype="site" objname="imu"/>
+        <framelinacc name="COM_linAcc_ref" objtype="site" objname="imu"/>
+        <framequat name="COM_quat" objtype="site" objname="imu"/>
+
+        <touch name="FL_contact" site="Foot_FL_contact"/>
+        <touch name="FR_contact" site="Foot_FR_contact"/>
+        <touch name="RL_contact" site="Foot_RL_contact"/>
+        <touch name="RR_contact" site="Foot_RR_contact"/>
+    </sensor>
+
+</mujoco>

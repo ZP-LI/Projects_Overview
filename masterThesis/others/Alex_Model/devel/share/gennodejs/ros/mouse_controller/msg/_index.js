@@ -1,0 +1,1 @@
+/home/zhiping/MA/Alex_Model/devel/.private/mouse_controller/share/gennodejs/ros/mouse_controller/msg/_index.js

@@ -1,0 +1,7 @@
+set(mouse_controller_SETUP_PY_SETUP_MODULE "distutils.core")
+set(mouse_controller_SETUP_PY_VERSION "0.0.0")
+set(mouse_controller_SETUP_PY_SCRIPTS "")
+set(mouse_controller_SETUP_PY_PACKAGES "mouse_controller")
+set(mouse_controller_SETUP_PY_PACKAGE_DIRS "src/mouse_controller")
+set(mouse_controller_SETUP_PY_MODULES "")
+set(mouse_controller_SETUP_PY_MODULE_DIRS "")

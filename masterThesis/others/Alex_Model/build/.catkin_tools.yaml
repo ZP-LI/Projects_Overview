@@ -1,0 +1,6 @@
+devel_space: /home/zhiping/MA/Alex_Model/devel
+install: false
+install_space: /home/zhiping/MA/Alex_Model/install
+profile: default
+source_space: /home/zhiping/MA/Alex_Model/src
+workspace: /home/zhiping/MA/Alex_Model

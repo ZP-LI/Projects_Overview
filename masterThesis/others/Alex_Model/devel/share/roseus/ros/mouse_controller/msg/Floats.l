@@ -1,0 +1,1 @@
+/home/zhiping/MA/Alex_Model/devel/.private/mouse_controller/share/roseus/ros/mouse_controller/msg/Floats.l

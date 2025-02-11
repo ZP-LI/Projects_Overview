@@ -1,0 +1,8 @@
+prefix=/home/zhiping/MA/Alex_Model/devel/.private/mouse_controller
+
+Name: mouse_controller
+Description: Description of mouse_controller
+Version: 0.0.0
+Cflags: -I/home/zhiping/MA/Alex_Model/devel/.private/mouse_controller/include
+Libs: -L${prefix}/lib 
+Requires: 

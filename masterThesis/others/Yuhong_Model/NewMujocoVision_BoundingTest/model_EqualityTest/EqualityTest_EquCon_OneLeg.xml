@@ -1,0 +1,105 @@
+<mujoco>
+
+    <include file="basic_scene.xml" />
+    <include file="left_leg_stl_assets.xml"/>
+    <include file="right_leg_stl_assets.xml"/>
+    <include file="tail_assets/tail_stl_assets.xml"/>
+
+    <asset>
+        <mesh name="head" file="stl-meshes/head_main.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="head_mounting" file="stl-meshes/head_bracket.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="main_body" file="stl-meshes/main_chest.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="spine_t1" file="stl-meshes/spine_t1.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="spine_t2" file="stl-meshes/spine_t2_zeroed.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="spine_t3" file="stl-meshes/spine_t3_zeroed.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="spine_t4" file="stl-meshes/spine_t4_zeroed.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="hip" file="stl-meshes/hip_zeroed.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="reel_sm" file="stl-meshes/reel_small.stl" scale="0.001 0.001 0.001"/>
+        <mesh name="tail" file="stl-meshes/Tail_Unit.stl" scale="0.001 0.001 0.001"/>
+    </asset>
+
+    <worldbody>
+        <light diffuse=".5 .5 .5" pos="0 -1.0 3" dir="0 0 -1"/>    
+        <!-- <geom type="plane" size="0 0 0.03" material="matplane" rgba="1 1 1 1"/> -->
+
+        <body pos="0.0225 0.008 0.0">
+            <!-- <joint name="rail" type="free" /> -->
+
+            <body name="servo_horn_fl" pos="0.0136 -0.0055 0.1">
+                <joint name="thigh_joint_fl" pos="0 0 0.0064" ref="0" damping="0.75" type="hinge" axis="1 0 0" armature="0.0065"/>
+                <site name="thigh_link_fl" pos="0.000 0 0.0064" size="0.001" rgba=".8 .1 .8 1"/>
+                <geom name="servo_horn_fl" type="mesh"  mesh="servo_link_l" conaffinity="0" pos="-0.0112 0.0015 0.0043" euler="90 0 0" />
+                <!-- <geom name="servo_check_fl" type="cylinder" conaffinity="1"  fromto="0.002 0 0.0064 0.003 0 0.0064" size="0.0039" rgba=".9 .1 .1 1" /> -->
+                <body name="thigh_up_link_1_fl" pos="0 0 0.0182">
+                    <geom name="thigh_up_link_1_fl" type="cylinder" conaffinity="0"  fromto="-0.002 0 0 0.002 0 0" size="0.0025" rgba=".9 .1 .1 0" />
+                    <site name="thigh_up_point_1_fl" pos="0.000 0 0" size="0.001" rgba=".8 .1 .8 1"/>
+                </body>
+            </body>
+
+            <body name="main_leg_fl" pos="0 0 0.1">
+                <geom name="hip_box_fl" type="mesh" mesh="hip_l" conaffinity="0" pos="0 0.0004 0.0071" euler="90 0 0"/>
+                <body name="thigh_down_fl" pos="0.0136 -0.0055 -0.0064">
+                    <joint name="leg_joint_fl" pos="0 0 0" ref="0" damping="0.75" type="hinge" axis="1 0 0"  armature="0.0065"/>
+                    <site name="leg_link_fl" pos="0 0 0" size="0.003" rgba=".5 .5 .8 1"/>
+                    <geom name="thigh_down_fl" type="mesh" mesh="thigh_down_l" conaffinity="0" pos="-0.0044 0.05 0" euler="180 0 0"/>
+
+                    <body name="foot_fl" pos="0 0.031 0" euler="-29.168 0 0">
+                        <joint name="knee_down_fl" pos="0 0 0" type="hinge" axis="1 0 0" stiffness="0.1" damping="0.005" armature="0.0065"/>
+                        <site name="knee_down_fl" pos="0 0 0" size="0.001" rgba=".8 .1 .8 1"/>
+                        <geom name="foot_fl" type="mesh" mesh="foot_l" pos="0.0036 0 -0.035" euler="90 180 0" conaffinity="1"/>
+                        <site name="ankle_fl" pos="0 0 -0.035" size="0.003" rgba=".8 .1 .8 1"/>
+
+                        <body name="thigh_up_fl" pos="0.00 0 0.015" euler="12.4566 0 0">
+                            <joint name="knee_up_fl" pos="0 0 0" type="hinge" axis="1 0 0" stiffness="0.1" damping="0.005" armature="0.0065"/>
+                            <site name="knee_up_fl" pos="0 0 0" size="0.001" rgba=".8 .1 .8 1"/>
+                            <geom name="thigh_up_fl" type="mesh" mesh="thigh_up_l" conaffinity="0" pos="-0.0064 0.01 0" euler="90 0 0"/>
+                            <body name="thigh_up_link_2_fl" pos="0 -0.040 0">
+                                <geom name="thigh_up_link_2_fl" type="cylinder" conaffinity="0" mass=".001" fromto="-0.002 0 0 0.002 0 0" size="0.0025" rgba=".9 .9 .1 0" />
+                                <site name="thigh_up_point_2_fl" pos="0.0 0 0" size="0.001" rgba=".8 .8 .1 1"/>
+                            </body>
+                        </body>
+                        
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+    <equality>
+        <!-- <connect anchor="0 0 0" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl" solimp="0.9995 0.9999 0.001" solref="0.002 1"/> -->
+        <connect anchor="0 0 0" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl" solimp="0.9995 0.9999 0.001" solref="0.002 1"/>
+
+        <!-- <connect anchor="0 -0.03 0" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl" />
+        <connect anchor="0 0.03 0" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl"/>
+        <connect anchor="0 0 0.03" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl"/>
+        <connect anchor="0 0 -0.03" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl"/>
+        <connect anchor="0.03 0 0" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl"/>
+        <connect anchor="-0.03 0 0" body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl"/> -->
+        <!-- <weld body1="thigh_up_link_1_fl" body2="thigh_up_fl" solimp="0.9995 0.9999 0.001" solref="0.001 1"/> -->
+    </equality>
+
+    <contact>
+        <exclude body1="main_leg_fl" body2="servo_horn_fl"/>
+
+        <!-- <pair geom1="thigh_up_link_test1_fl" geom2="thigh_up_fl"/> -->
+    </contact>
+
+    <!-- <tendon>
+        <spatial name="m2_tendon_fl" limited="true" range="0 0.001" width="0.001" rgba="0.1 0.9 0.9 1">
+        <spatial name="m2_tendon_fl" limited="true" range="0 0.001" width="0.001" rgba="0.1 0.9 0.9 1">
+            <site site="thigh_up_point_2_fl"/>
+            <site site="thigh_up_point_1_fl"/>
+        </spatial>
+    </tendon> -->
+
+    <sensor>
+        <jointpos name="thigh_joint_fl" joint="thigh_joint_fl"/>
+        <jointpos name="leg_joint_fl" joint="leg_joint_fl"/>
+    </sensor>
+
+    <actuator>
+        <position name="leg_joint_fl" joint="leg_joint_fl" gear="1" ctrllimited="true" ctrlrange="-3.00 3.00"  forcelimited="true" forcerange="-32 32" kp="500"/>
+        <position name="thigh_joint_fl" joint="thigh_joint_fl" gear="1" ctrllimited="true" ctrlrange="-3.00 3.00"  forcelimited="true" forcerange="-32 32" kp="500"/>
+    </actuator>
+
+</mujoco>
